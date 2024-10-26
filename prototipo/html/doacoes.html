@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Doações e Apoio Local</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Centro de Doações e Apoio Local</h1>
+        <a href="../index.html">Voltar à página inicial</a>
+    </header>
+
+    <section>
+        <h2>Pontos de Doação</h2>
+        <p>Veja aqui onde doar alimentos e roupas...</p>
+
+        <h2>Abrigos Temporários</h2>
+        <p>Lista de abrigos para pessoas afetadas...</p>
+        <!-- Lista de abrigos -->
+        <section class="shelter-list">
+            <h2>Abrigos Disponíveis</h2>
+
+            <div class="shelter" onclick="showShelterInfo('Abrigo Central')">
+                <p><strong>Abrigo Central</strong></p>
+                <p>Capacidade: 100 pessoas | Ocupação: 75</p>
+            </div>
+
+            <div class="shelter" onclick="showShelterInfo('Abrigo Norte')">
+                <p><strong>Abrigo Norte</strong></p>
+                <p>Capacidade: 80 pessoas | Ocupação: 80 <span class="full">Lotado</span></p>
+            </div>
+
+            <div class="shelter" onclick="showShelterInfo('Abrigo Sul')">
+                <p><strong>Abrigo Sul</strong></p>
+                <p>Capacidade: 50 pessoas | Ocupação: 30</p>
+            </div>
+        </section>
+
+        <h2>Serviços Voluntários</h2>
+        <p>Informações para quem deseja se voluntariar...</p>
+    </section>
+</body>
+
+</html>
