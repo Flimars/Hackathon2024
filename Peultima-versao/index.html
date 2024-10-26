@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Monitoramento de Enchentes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="monitoramento.html">Monitoramento de Enchentes</a></li> -->
+                <li><a href="guia.html">Guia de Emergência e Rotas de Fuga</a></li>
+                <!-- <li><a href="rotas.html">Rotas de Fuga</a></li> -->
+                <li><a href="abrigos.html">Abrigos e Doações</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+ 
+       <section class="introducao">
+            <h1>Proteja-se em Caso de Enchente</h1>
+            <p>Encontre informações essenciais para manter você e sua família seguros durante enchentes. Acesse orientações, rotas de evacuação, centros de abrigo e apoio voluntário em momentos críticos.</p>
+        </section>
+
+        <!-- Seção de cards -->
+        <section class="fileira-de-cards"> 
+            <div class="card"><span><a href="guia.html">Guia de Emergência</a></span></div>
+            <div class="card"><span><a href="rotas.html">Rotas de Fugas</a></span></div>
+            <div class="card"><span><a href="abrigos.html">Abrigos</a></span></div>
+            <div class="card"><span><a href="doacoes.html">Centros de Doações</a></span></div>
+        </section>
+
+
+        <section class="intro">
+            <h1>Monitoramento de Enchentes</h1>
+            <p>Acompanhe em tempo real o status de risco de enchentes em diferentes regiões. Mantenha-se informado e seguro!</p>
+        </section>
+    
+
+        <!-- Monitoramento -->
+        <section class="monitoramento">
+            <h2>Status de Risco por Região</h2>
+            <div class="map-container">
+                <div id="map" style="height: 400px;"></div>
+            </div>
+    
+            <table class="tabela-risco">
+                <thead>
+                    <tr>
+                        <th>Região</th>
+                        <th>Status de Risco</th>
+                        <th>Nível</th>
+                        <th>Ações Recomendadas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Porto Alegre</td>
+                        <td class="risco-alto">Risco Alto</td>
+                        <td>⚠️⚠️⚠️</td>
+                        <td>Evacuação Recomendável</td>
+                    </tr>
+                    <tr>
+                        <td>Canoas</td>
+                        <td class="risco-moderado">Risco Moderado</td>
+                        <td>⚠️⚠️</td>
+                        <td>Fique Atento</td>
+                    </tr>
+                    <tr>
+                        <td>Pelotas</td>
+                        <td class="risco-baixo">Risco Baixo</td>
+                        <td>⚠️</td>
+                        <td>Nenhuma Ação Necessária</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <p class="alert">⚠️ Atualização automática a cada 30 minutos. Mantenha-se atualizado sobre o status da sua região.</p>
+        </section>
+    
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            <script>
+                // Inicialização do Mapa
+                var map = L.map('map').setView([-30.0346, -51.2177], 6); // Coordenadas para Porto Alegre, RS
+        
+                // Adicionando a camada de tiles
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '© OpenStreetMap'
+                }).addTo(map);
+        
+                // Adicionando marcadores
+                L.marker([-30.0346, -51.2177]).addTo(map)
+                    .bindPopup('Porto Alegre')
+                    .openPopup();
+        
+                L.marker([-29.9958, -50.1007]).addTo(map)
+                    .bindPopup('Canoas');
+        
+                L.marker([-31.7731, -52.3310]).addTo(map)
+                    .bindPopup('Pelotas');
+        </script>
+    </main>
+
+    <footer>
+        <p>&copy;  2024 - Todos os direitos reservados. Hackathon Pro AI</p></p>
+    </footer>
+</body>
+</html>

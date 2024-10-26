@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrigos - Sistema de Monitoramento de Enchentes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="monitoramento.html">Monitoramento de Enchentes</a></li>
+                <li><a href="guia.html">Guia de Emergência</a></li>
+                <li><a href="rotas.html">Rotas de Fuga</a></li>
+                <li><a href="abrigos.html">Abrigos</a></li>
+                <li><a href="doacoes.html">Centros de Doações</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h1>Abrigos Disponíveis</h1>
+            <p>Esta página fornece informações sobre os abrigos disponíveis durante situações de emergência. Se você ou alguém que você conhece precisa de abrigo, consulte a lista abaixo.</p>
+        </section>
+
+        <section id="lista-abrigos" class="section">
+            <h2>Lista de Abrigos</h2>
+            <ul>
+                <li>
+                    <strong>Centro Comunitário da Praça:</strong> Rua das Acácias, 123 - Capacidade: 100 pessoas
+                </li>
+                <li>
+                    <strong>Escola Municipal São José:</strong> Avenida dos Lírios, 456 - Capacidade: 200 pessoas
+                </li>
+                <li>
+                    <strong>Ginásio Poliesportivo:</strong> Rua do Comércio, 789 - Capacidade: 300 pessoas
+                </li>
+                <li>
+                    <strong>Clube de Mães:</strong> Rua das Flores, 321 - Capacidade: 50 pessoas
+                </li>
+            </ul>
+        </section>
+
+        <section id="voluntariado" class="section">
+            <h2>Inscreva-se como Voluntário</h2>
+            <p>Se você deseja ajudar durante as enchentes, considere se inscrever como voluntário. Sua ajuda é muito valiosa!</p>
+            <form action="submit_voluntario.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <button type="submit" class="btn">Enviar Inscrição</button>
+            </form>
+        </section>
+
+        <section id="contatos" class="section">
+            <h2>Contatos Importantes</h2>
+            <ul>
+                <li><strong>Polícia:</strong> 190</li>
+                <li><strong>Bombeiros:</strong> 193</li>
+                <li><strong>Ambulância:</strong> 192</li>
+                <li><strong>Defesa Civil:</strong> 199</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sistema de Monitoramento de Enchentes. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

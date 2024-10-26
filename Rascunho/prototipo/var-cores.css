@@ -1,0 +1,12 @@
+/* Definição das cores principais da bandeira do Rio Grande do Sul */
+:root {
+    --verde-rs: #006847;
+    --verde-leve: #5fd2ad;
+    --vermelho-rs: #BF0A30;
+    --vermelho-leve: #f25555;
+    --amarelo-rs: #FFD700;
+    --amarelo-leve: #e4cc43;
+    --branco: #ffffff;
+    --cinza-claro: #f5f5f5;
+    --cinza-escuro: #333333;
+}

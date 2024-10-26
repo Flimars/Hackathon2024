@@ -1,0 +1,255 @@
+:root {
+    --vermelho-rs: #BF0A30; /* Vermelho */
+    --verde-rs: #006847; /* Verde */
+    --amarelo-rs: #FFD700; /* Amarelo */
+    --branco: #ffffff; /* Branco */
+    --cinza-claro: #f5f5f5; /* Cinza claro */
+    --cinza-escuro: #333333; /* Cinza escuro */
+}
+
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cinza-claro);
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho e navegação */
+header {
+    background-color: var(--vermelho-rs);
+    color: var(--branco);
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--amarelo-rs);
+    border-radius: 5px;
+}
+
+/* Seção de introdução */
+.intro {
+    text-align: center;
+    padding: 50px;
+    background-color: var(--verde-rs);
+    color: var(--branco);
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2em;
+}
+
+/* Seção principal com imagem de fundo */
+.introducao {
+    position: relative;
+    background-image: url('./img/Enchente_RS.webp'); /* Verifique o caminho correto da imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    color: white;
+    text-align: center;
+    width: 99,9%; /* 100% da largura da tela  vw*/
+    height: auto; /* 100% da altura da tela */
+    overflow: hidden;
+    margin: 0; /* Remove possíveis margens */
+    padding: 120px 0px; /* Remove possíveis paddings */
+}
+
+.introducao::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay para escurecer a imagem e destacar o texto */
+    z-index: 1;
+}
+
+.introducao h1, .introducao p {
+    position: relative;
+    z-index: 2;
+}
+
+.introducao h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.introducao p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+
+/* Seção de cards */
+
+.fileira-de-cards {
+    display: flex; /* Altera de inline-flex para flex */
+    flex-wrap: wrap; /* Permite que os cards se movam para a linha seguinte se não houver espaço */
+    justify-content: center; /* Centraliza os cards na linha */
+    gap: 20px; /* Espaçamento entre os cards */
+    margin-top: -70px; /* para sobrepor parcialmente a imagem de fundo */
+    width: 95%;
+    height: auto;
+    position: relative;
+    z-index: 2; /* Eleva os cards acima do fundo */
+    background-color: transparent;
+    border: transparent;
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: rgb(179, 12, 12);
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none; /* Retira o sublinhado do link */
+    margin: 10px; /* Adiciona margem ao redor de cada card */
+}
+
+.card a {
+    color: white;
+    text-decoration: none; /* Retira o sublinhado do link */
+}
+
+.card:nth-child(1) { background-image: url('./img/emergencia.webp'); }
+.card:nth-child(2) { background-image: url('./img/rota-de-fuga.webp'); }
+.card:nth-child(3) { background-image: url('./img/abrigos.webp'); }
+.card:nth-child(4) { background-image: url('./img/doacoes.webp'); }
+.card:nth-child(4) { background-image: url('./img/doacoes.webp'); }
+
+/* Sobreposição escura */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* sobreposição com opacidade */
+    z-index: 1;
+  
+}
+
+.card span {
+    position: relative;
+    z-index: 2;
+}
+
+section {
+    padding: 40px 20px;
+    margin: 20px;
+    border: 1px solid var(--verde-rs);
+    border-radius: 5px;
+    background-color: var(--branco);
+}
+
+#map {
+    margin-bottom: 20px;
+    border: 1px solid var(--verde-rs);
+    border-radius: 5px;
+    height: 400px;
+    width: 100%;
+}
+
+/* Tabela de Status de Risco */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--verde-rs);
+}
+
+th {
+    background-color: var(--verde-rs);
+    color: var(--branco);
+}
+
+.baixo-risco {
+    background-color: #d4edda; /* Verde claro */
+}
+
+.medio-risco {
+    background-color: var(--amarelo-rs); /* Amarelo */
+}
+
+.alto-risco {
+    background-color: #f8d7da; /* Vermelho claro */
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: var(--vermelho-rs);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .introducao {
+        padding: 50px 20px;
+        height: auto;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+}

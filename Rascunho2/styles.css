@@ -1,0 +1,174 @@
+
+
+:root {
+    --verde-rs: #BF0A30; /* Verde */
+    --vermelho-rs: #006847; /* Vermelho */
+    --amarelo-rs: #FFD700; /* Amarelo */
+    --branco: #ffffff; /* Branco */
+    --cinza-claro: #f5f5f5; /* Cinza claro */
+    --cinza-escuro: #333333; /* Cinza escuro */
+}
+
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cinza-claro);
+    color: var(--cinza-escuro);
+}
+
+/* Estilo do cabeçalho e navegação */
+header {
+    background-color: var(--verde-rs);
+    color: var(--branco);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--amarelo-rs);
+    border-radius: 5px;
+}
+
+/* Seção de introdução */
+.intro {
+    text-align: center;
+    padding: 50px;
+    background-color: var(--vermelho-rs);
+    color: var(--branco);
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2em;
+}
+
+/* Seções de monitoramento */
+section {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid var(--verde-rs);
+    border-radius: 5px;
+    background-color: var(--branco);
+}
+
+/* Mapa */
+#map {
+    margin-bottom: 20px;
+    border: 1px solid var(--verde-rs);
+    border-radius: 5px;
+}
+
+/* Tabela de Status de Risco */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--verde-rs);
+}
+
+th {
+    background-color: var(--verde-rs);
+    color: var(--branco);
+}
+
+/* Classes de risco */
+.baixo-risco {
+    background-color: #d4edda; /* Verde claro */
+}
+
+.medio-risco {
+    background-color: var(--amarelo-rs); /* Amarelo */
+}
+
+.alto-risco {
+    background-color: #f8d7da; /* Vermelho claro */
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: var(--verde-rs);
+    color: var(--branco);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Cards na página principal */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.card {
+    background-color: var(--branco);
+    border: 1px solid var(--verde-rs);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.card h2 {
+    color: var(--verde-rs);
+}
+
+.card p {
+    margin-bottom: 20px;
+    color: var(--cinza-escuro);
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--amarelo-rs);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.card a:hover {
+    background-color: var(--vermelho-rs);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
