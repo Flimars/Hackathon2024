@@ -8,8 +8,27 @@
 }
 
 .inputname {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 93vw;
+    text-align: center;
 }
+
+#nome, #email,
+#telefone {
+    align-items: flex-start;
+}
+
+.btn {
+    margin: 10px;
+}
+
+.btn:hover {
+    background-color: var(--amarelo-rs);
+    border-radius: 5px;
+} 
+
 
 /* Estilos globais */
 body {
@@ -184,7 +203,12 @@ section {
     border: 1px solid var(--verde-rs);
     border-radius: 5px;
     background-color: var(--branco);
+    text-align: center;
 }
+
+.section ul, ol {
+    list-style: none;
+}   
 
 #map {
     margin-bottom: 20px;
