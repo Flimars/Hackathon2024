@@ -1,3 +1,4 @@
+/*Declaração de variaveis para padrão de cores*/
 :root {
     --vermelho-rs: #BF0A30; /* Vermelho */
     --verde-rs: #006847; /* Verde */
@@ -7,7 +8,8 @@
     --cinza-escuro: #333333; /* Cinza escuro */
 }
 
-.inputname {
+/* Formulário versão depreciada*/
+/* .inputname {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,7 +29,7 @@
 .btn:hover {
     background-color: var(--amarelo-rs);
     border-radius: 5px;
-} 
+}  */
 
 
 /* Estilos globais */
@@ -134,7 +136,6 @@ nav ul li a:hover {
 
 
 /* Seção de cards */
-
 .fileira-de-cards {
     display: flex; /* Altera de inline-flex para flex */
     flex-wrap: wrap; /* Permite que os cards se movam para a linha seguinte se não houver espaço */
@@ -284,7 +285,6 @@ footer p {
 
 
 /*Carrousel de imagens*/
-
 .carrossel {
     position: relative;
     width: 80%;
@@ -328,3 +328,61 @@ footer p {
   .carrossel-controles button:hover {
     background-color: #3e8e41;
   }
+
+  /* Estilo form para a seção de voluntariado */
+            .section {
+                padding: 40px;
+                margin: 20px auto;
+                max-width: 500px;
+                border: 1px solid var(--verde-rs);
+                background-color: var(--branco);
+                border-radius: 10px;
+                text-align: center;
+            }
+
+            .inscrevase {
+                color: var(--verde-rs);
+                margin-bottom: 15px;
+            }
+
+            /* Estilo dos campos de entrada */
+            .input-group {
+                margin-bottom: 20px;
+                text-align: left;
+            }
+
+            .input-group label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+                color: var(--verde-rs);
+            }
+
+            .input-group input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+                outline: none;
+                transition: border-color 0.3s ease;
+            }
+
+            .input-group input:focus {
+                border-color: var(--verde-rs);
+            }
+
+            .botao {
+                background-color: var(--verde-rs);
+                color: white;
+                padding: 10px 20px;
+                font-size: 13px;
+                font-weight: bold;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+
+            .botao:hover {
+                background-color: #007733;
+            }

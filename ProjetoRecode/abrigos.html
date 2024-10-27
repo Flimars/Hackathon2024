@@ -20,11 +20,11 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <section class="intro">
             <h1>Abrigos Disponíveis</h1>
-            <p>Esta página fornece informações sobre os abrigos disponíveis  e contatos importantes durante situações de emergência. Se você ou alguém que você conhece precisa de abrigo, consulte a lista abaixo.</p>
+            <p> Consulte a lista de abrigos disponíveis e os contatos importantes para momentos de emergência. Se você ou alguém que conhece precisa de um local seguro, veja as opções abaixo para obter ajuda imediata </p>
         </section>
 
         <section id="lista-abrigos" class="section">
@@ -59,7 +59,8 @@
 
         <section class="intro">
             <h1>Centros de Doações</h1>
-            <p>Esta página fornece informações sobre os centros de doações disponíveis para ajudar as vítimas de enchentes.</p>
+            <p>Encontre informações sobre os centros de doações disponíveis para ajudar as vítimas de
+                enchentes.</p>
         </section>
 
         <section id="lista-centros" class="section">
@@ -93,28 +94,33 @@
             </ul>
         </section>
 
-        <section id="voluntariado" class="section">
+        <!-- FORMULARIO DE VOLUNTARIOS -->
+        <section class="section">
             <h2 class="inscrevase">Inscreva-se como Voluntário</h2>
-            <p class="inscrevase">Se você deseja ajudar na arrecadação e distribuição de doações, considere se inscrever como voluntário!</p>
-            <form action="submit_voluntario.php" method="post">
-             
-            <div class="inputname">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-            </div >    
-            <div class="inputname">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="inputname">
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
-            </div>
-                <button type="submit" class="btn">Enviar Inscrição</button>
+            <p class="inscrevase">Se você deseja ajudar na arrecadação e distribuição de doações, considere se inscrever
+                como voluntário!</p>
+
+            <form method="post">
+                <div class="input-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="input-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone">
+                </div>
+
+                <button type="submit" class="botao">Inscreva-se</button>
             </form>
         </section>
 
-        
+
 
     </main>
 

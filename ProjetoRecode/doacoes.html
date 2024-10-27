@@ -20,11 +20,12 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <section class="intro">
             <h1>Centros de Doações</h1>
-            <p>Esta página fornece informações sobre os centros de doações disponíveis para ajudar as vítimas de enchentes.</p>
+            <p>Esta página fornece informações sobre os centros de doações disponíveis para ajudar as vítimas de
+                enchentes.</p>
         </section>
 
         <section id="lista-centros" class="section">
@@ -58,24 +59,37 @@
             </ul>
         </section>
 
-        <section id="voluntariado" class="section">
-            <h2 class="inscrevase">Inscreva-se como Voluntário</h2>
-            <p class="inscrevase">Se você deseja ajudar na arrecadação e distribuição de doações, considere se inscrever como voluntário!</p>
-            <form action="submit_voluntario.php" method="post">
-             
-            <div class="inputname">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-            </div >    
-            <div class="inputname">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="inputname">
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
-            </div>
-                <button type="submit" class="btn">Enviar Inscrição</button>
+        <!-- FORMULARIO DE DOADORES -->
+        <section class="section">
+            <h2 class="inscrevase">Seja um Doador</h2>
+            <p class="inscrevase">Se você deseja apoiar na arrecadação e distribuição de doações, inscreva-se como
+                doador!</p>
+
+            <form method="post">
+                <div class="input-group">
+                    <label for="tipo-doador">Tipo de Doador:</label>
+                    <select id="tipo-doador" name="tipo-doador">
+                        <option value="pessoa-fisica">Pessoa Física</option>
+                        <option value="pessoa-juridica">Pessoa Jurídica</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="input-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone">
+                </div>
+
+                <button type="submit" class="botao">Inscreva-se</button>
             </form>
         </section>
 

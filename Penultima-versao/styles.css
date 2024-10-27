@@ -302,3 +302,62 @@ footer p {
         font-size: 0.9em;
     }
 }
+
+/* Estilização do formulário*/
+/* Estilo para a seção de voluntariado /
+            .section {
+                padding: 40px;
+                margin: 20px auto;
+                max-width: 500px;
+                border: 1px solid var(--verde-rs);
+                background-color: var(--branco);
+                border-radius: 10px;
+                text-align: center;
+            }
+
+            .inscrevase {
+                color: var(--verde-rs);
+                margin-bottom: 15px;
+            }
+
+            / Estilo dos campos de entrada */
+            .input-group {
+                margin-bottom: 20px;
+                text-align: left;
+            }
+
+            .input-group label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+                color: var(--verde-rs);
+            }
+
+            .input-group input {
+                width: 90%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+                outline: none;
+                transition: border-color 0.3s ease;
+            }
+
+            .input-group input:focus {
+                border-color: var(--verde-rs);
+            }
+
+            .botao {
+                background-color: var(--verde-rs);
+                color: black;
+                padding: 10px 20px;
+                font-size: 13px;
+                font-weight: bold;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+
+            .botao:hover {
+                background-color: #007733;
+            }

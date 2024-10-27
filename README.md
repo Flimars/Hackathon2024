@@ -1,12 +1,12 @@
 ## #Equipe-008
 ## Membros Atuantes: 
 
-   * 
-   *
-   *
-   *
-   *
-   *
+   * Anselmo Silva
+   * Diego Pitoco
+   * Flávio de Medeiros Lima
+   * Hirislayne Batista
+   * Lauren Monteles
+   * Willian Santos
 
 
 
