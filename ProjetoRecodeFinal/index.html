@@ -32,9 +32,7 @@
 
     </section>
 
-    <!-- Carrousel -->
-    <!-- inicio Carrousel -->
-
+    <!-- Inicio Carrossel -->
     <section class="carrossel">
       <div class="carrossel-inner">
         <div class="carrossel-item">
@@ -56,10 +54,44 @@
         <button class="next">Próximo &rarr;</button>
       </div>
     </section>
-    <!-- Fim Carrousel -->
+
+    <!--Animação do Carrossel-->
+    <script>
+      const inner = document.querySelector('.carrossel-inner');
+      const items = document.querySelectorAll('.carrossel-item');
+      let index = 0;
+      const intervalTime = 3000; // Tempo de 3 segundos entre as transições
+      
+      function showSlide(n) {
+          index = (n + items.length) % items.length; // Garante que o índice fique dentro do range
+          inner.style.transform = `translateX(-${index * 100}%)`;
+      }
+      
+      // Função para passar automaticamente as imagens a cada 3 segundos
+      function autoSlide() {
+          showSlide(index + 1);
+      }
+      
+      // Define um intervalo de tempo para mudar as imagens
+      let slideInterval = setInterval(autoSlide, intervalTime);
+      
+      // Botões de navegação manual
+      document.querySelector('.next').addEventListener('click', () => {
+          clearInterval(slideInterval); // Reseta o intervalo quando o botão for clicado
+          showSlide(index + 1);
+          slideInterval = setInterval(autoSlide, intervalTime); // Reinicia o intervalo automático
+      });
+      
+      document.querySelector('.prev').addEventListener('click', () => {
+          clearInterval(slideInterval); // Reseta o intervalo quando o botão for clicado
+          showSlide(index - 1);
+          slideInterval = setInterval(autoSlide, intervalTime); // Reinicia o intervalo automático
+      });
+    </script>
+    <!-- Fim Carrossel -->
 
 
-    <!-- inicio Seção de cards -->
+    <!-- Inicio Seção de cards -->
     <section class="fileira-de-cards">
       <a href="guia.html" class="card">
         <div class="card-image"></div>
@@ -81,14 +113,13 @@
     <!-- Fim Seção de cards -->
 
 
+    <!-- Inicio seção de Monitoramento -->
     <section class="intro">
       <h1>Monitoramento de Enchentes</h1>
       <p>Acompanhe em tempo real o status de risco de enchentes em diferentes regiões. Mantenha-se informado e seguro!
       </p>
     </section>
 
-
-    <!-- Monitoramento -->
     <section class="monitoramento">
       <h2>Status de Risco por Região</h2>
       <div class="map-container">
@@ -130,7 +161,6 @@
       </p>
     </section>
 
-
     <!-- Mapa -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
@@ -154,56 +184,7 @@
       L.marker([-31.7731, -52.3310]).addTo(map)
         .bindPopup('Pelotas');
     </script>
-
-    <!-- carrousel -->
-    <!-- <script>
-            // Selecione os elementos do carrossel
-            const carrossel = document.querySelector('.carrossel');
-            const itens = document.querySelectorAll('.carrossel-item');
-            const prevButton = document.querySelector('.prev');
-            const nextButton = document.querySelector('.next');
-          
-            // Defina o item ativo inicial
-            let currentItem = 0;
-          
-            // Função para mostrar o item ativo
-            function showItem() {
-              itens.forEach((item, index) => {
-                item.classList.remove('active');
-                if (index === currentItem) {
-                  item.classList.add('active');
-                }
-              });
-            }
-          
-            // Função para ir para o próximo item
-            function nextItem() {
-              currentItem++;
-              if (currentItem >= itens.length) {
-                currentItem = 0;
-              }
-              showItem();
-            }
-          
-            // Função para ir para o item anterior
-            function prevItem() {
-              currentItem--;
-              if (currentItem < 0) {
-                currentItem = itens.length - 1;
-              }
-              showItem();
-            }
-          
-            // Adicione eventos aos botões
-            prevButton.addEventListener('click', prevItem);
-            nextButton.addEventListener('click', nextItem);
-          
-            // Mostre o item ativo inicial
-            showItem();
-          
-            // Automatize o carrossel (opcional)
-            setInterval(nextItem, 5000);
-          </script> -->
+    <!-- Fim seção de Monitoramento -->
 
   </main>
 

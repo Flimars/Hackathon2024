@@ -1,48 +1,24 @@
-/*Declaração de variaveis para padrão de cores*/
+/* Declaração de variaveis para padrão de cores */
 :root {
     --vermelho-rs: #BF0A30; /* Vermelho */
     --verde-rs: #006847; /* Verde */
     --amarelo-rs: #FFD700; /* Amarelo */
     --branco: #ffffff; /* Branco */
     --cinza-claro: #f5f5f5; /* Cinza claro */
-    --cinza-escuro: #333333; /* Cinza escuro */
+    --preto-claro: #2c3e50; /* Cinza escuro */
 }
-
-/* Formulário versão depreciada*/
-/* .inputname {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 93vw;
-    text-align: center;
-}
-
-#nome, #email,
-#telefone {
-    align-items: flex-start;
-}
-
-.btn {
-    margin: 10px;
-}
-
-.btn:hover {
-    background-color: var(--amarelo-rs);
-    border-radius: 5px;
-}  */
-
 
 /* Estilos globais */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--cinza-claro);
+    background-color: var(--preto-escuro);
     color: var(--cinza-escuro);
     line-height: 1.6;
 }
 
-/* Estilo do cabeçalho e navegação */
+/* Estilos do cabeçalho e navegação */
 header {
     background-color: var(--vermelho-rs);
     color: var(--branco);
@@ -74,23 +50,6 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Seção de introdução */
-.intro {
-    text-align: center;
-    padding: 50px;
-    background-color: var(--verde-rs);
-    color: var(--branco);
-}
-
-.intro h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.intro p {
-    font-size: 1.2em;
-}
-
 /* Seção principal com imagem de fundo */
 .introducao {
     position: relative;
@@ -105,6 +64,8 @@ nav ul li a:hover {
     overflow: hidden;
     margin: 0; /* Remove possíveis margens */
     padding: 120px 0px; /* Remove possíveis paddings */
+    border: transparent;
+    border-radius: 0px;
 }
 
 .introducao::before {
@@ -126,16 +87,44 @@ nav ul li a:hover {
 .introducao h1 {
     font-size: 3em;
     margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Sombra sutil */
+    position: relative;
+    z-index: 2;
 }
 
 .introducao p {
     font-size: 1.4em;
     margin-bottom: 30px;
-    font-style: italic;
+    padding: 0 0 25px 25px;
+    text-align: center;
+    margin: 0% 18%;
+    position: relative;
+    z-index: 2;
 }
 
+/* Seção de introdução */
+.intro {
+    text-align: center;
+    padding: 50px;
+    background-color: var(--verde-rs);
+    color: var(--branco);
+}
 
-/* Seção de cards */
+.intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Sombra */
+}
+
+.intro p {
+    font-size: 1em;
+    margin-bottom: 30px;
+    padding: 0 0 25px 25px;
+    text-align: center;
+    margin: 0% 18%;
+}
+
+/************ Seção de cards **************/
 .fileira-de-cards {
     display: flex; /* Altera de inline-flex para flex */
     flex-wrap: wrap; /* Permite que os cards se movam para a linha seguinte se não houver espaço */
@@ -147,7 +136,7 @@ nav ul li a:hover {
     position: relative;
     z-index: 2; /* Eleva os cards acima do fundo */
     background-color: transparent;
-    border: transparent;
+    border: none;
 }
 
 .card {
@@ -157,7 +146,7 @@ nav ul li a:hover {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: rgb(179, 12, 12);
+    color: white;
     font-size: 14px;
     text-align: center;
     display: flex;
@@ -169,34 +158,48 @@ nav ul li a:hover {
     margin: 10px; /* Adiciona margem ao redor de cada card */
 }
 
-.card a {
-    color: white;
-    text-decoration: none; /* Retira o sublinhado do link */
-}
-
 .card:nth-child(1) { background-image: url('./img/emergencia.webp'); }
 .card:nth-child(2) { background-image: url('./img/rota-de-fuga.webp'); }
 .card:nth-child(3) { background-image: url('./img/abrigos.webp'); }
 .card:nth-child(4) { background-image: url('./img/doacoes.webp'); }
 .card:nth-child(4) { background-image: url('./img/doacoes.webp'); }
 
-/* Sobreposição escura */
-.card::before {
+.card::before { /* Sobreposição escura */
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* sobreposição com opacidade */
+    background: rgba(0, 0, 0, 0.5); /* Opacidade */
     z-index: 1;
   
 }
 
+.card:hover .card-image {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Texto dos cards */
 .card span {
     position: relative;
+    color: white;
+    font-weight: 500;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
     z-index: 2;
+    transition: font-weight 0.3s ease, color 0.3s ease;
 }
+
+.card:hover span {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+/*Fim secao de cards*/
 
 section {
     padding: 40px 20px;
@@ -219,7 +222,7 @@ section {
     width: 100%;
 }
 
-/* Tabela de Status de Risco */
+/* Estilos Mapa */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -284,105 +287,143 @@ footer p {
 }
 
 
-/*Carrousel de imagens*/
+/*----------------------- Inicio Carrousel de imagens --------------------------------*/
 .carrossel {
     position: relative;
-    width: 80%;
+    width: 75%;
+    height: auto;
     margin: 40px auto;
     overflow: hidden;
-  }
-  
-  .carrossel-item {
-    display: none;
+}
+
+.carrossel-inner {
+    display: flex;
+    transition: transform 5s;
+}
+
+.carrossel-item {
+    flex: 0 0 100%;
     width: 100%;
-    height: 300px;
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .carrossel-item.active {
-    display: block;
-  }
-  
-  .carrossel-item img {
+    height: 500px;
+}
+
+.carrossel-item img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  .carrossel-controles {
-    text-align: center;
-  }
-  
-  .carrossel-controles button {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
+}
+
+.carrossel-controles {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prev, .next {
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  .carrossel-controles button:hover {
-    background-color: #3e8e41;
-  }
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+}
 
-  /* Estilo form para a seção de voluntariado */
-            .section {
-                padding: 40px;
-                margin: 20px auto;
-                max-width: 500px;
-                border: 1px solid var(--verde-rs);
-                background-color: var(--branco);
-                border-radius: 10px;
-                text-align: center;
-            }
+.prev:hover, .next:hover {
+    background-color: #ccc;
+}
 
-            .inscrevase {
-                color: var(--verde-rs);
-                margin-bottom: 15px;
-            }
+.carrossel-inner {
+    /* Adiciona animação */
+    animation: slide 10s infinite;
+}
 
-            /* Estilo dos campos de entrada */
-            .input-group {
-                margin-bottom: 20px;
-                text-align: left;
-            }
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(-100%);
+    }
+    66.66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
-            .input-group label {
-                display: block;
-                margin-bottom: 5px;
-                font-weight: bold;
-                color: var(--verde-rs);
-            }
+.prev, .next {
+    /* Oculta os botões por padrão */
+    display: none;
+}
+/************************Fim carrossel**************************************/
 
-            .input-group input {
-                width: 100%;
-                padding: 10px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                font-size: 16px;
-                outline: none;
-                transition: border-color 0.3s ease;
-            }
+/******* Estilo formularios *******/
+.section {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 500px;
+    border: 1px solid var(--verde-rs);
+    background-color: var(--branco);
+    border-radius: 10px;
+    text-align: center;
+}
 
-            .input-group input:focus {
-                border-color: var(--verde-rs);
-            }
+.inscrevase {
+    color: var(--verde-rs);
+    margin-bottom: 15px;
+}
 
-            .botao {
-                background-color: var(--verde-rs);
-                color: white;
-                padding: 10px 20px;
-                font-size: 13px;
-                font-weight: bold;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: background-color 0.3s ease, border-color 0.3s ease;
-            }
 
-            .botao:hover {
-                background-color: #007733;
-            }
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--verde-rs);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#tipo-doador {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--verde-rs);
+}
+
+.botao {
+    background-color: var(--verde-rs);
+    color: white;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #007733;
+}
