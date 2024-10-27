@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abrigos - Sistema de Monitoramento de Enchentes</title>
+    <title>Centros de Doações - Sistema de Monitoramento de Enchentes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -13,42 +13,54 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="monitoramento.html">Monitoramento de Enchentes</a></li>
-                <li><a href="guia.html">Guia de Emergência</a></li>
-                <li><a href="rotas.html">Rotas de Fuga</a></li>
-                <li><a href="abrigos.html">Abrigos</a></li>
-                <li><a href="doacoes.html">Centros de Doações</a></li>
+                <!-- <li><a href="monitoramento.html">Monitoramento de Enchentes</a></li> -->
+                <li><a href="guia.html">Guia de Emergência e Rotas de Fuga</a></li>
+                <!-- <li><a href="rotas.html">Rotas de Fuga</a></li> -->
+                <li><a href="abrigos.html">Abrigos e Doações</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
         <section class="intro">
-            <h1>Abrigos Disponíveis</h1>
-            <p>Esta página fornece informações sobre os abrigos disponíveis durante situações de emergência. Se você ou alguém que você conhece precisa de abrigo, consulte a lista abaixo.</p>
+            <h1>Centros de Doações</h1>
+            <p>Esta página fornece informações sobre os centros de doações disponíveis para ajudar as vítimas de enchentes.</p>
         </section>
 
-        <section id="lista-abrigos" class="section">
-            <h2>Lista de Abrigos</h2>
+        <section id="lista-centros" class="section">
+            <h2>Lista de Centros de Doações</h2>
             <ul>
                 <li>
-                    <strong>Centro Comunitário da Praça:</strong> Rua das Acácias, 123 - Capacidade: 100 pessoas
+                    <strong>Centro de Doações da Praça Central:</strong> Rua das Palmeiras, 100 - Horário: 8h às 18h
                 </li>
                 <li>
-                    <strong>Escola Municipal São José:</strong> Avenida dos Lírios, 456 - Capacidade: 200 pessoas
+                    <strong>Escola Municipal da Esperança:</strong> Avenida da Solidariedade, 200 - Horário: 9h às 17h
                 </li>
                 <li>
-                    <strong>Ginásio Poliesportivo:</strong> Rua do Comércio, 789 - Capacidade: 300 pessoas
+                    <strong>Clube de Voluntários:</strong> Rua da Amizade, 300 - Horário: 10h às 16h
                 </li>
                 <li>
-                    <strong>Clube de Mães:</strong> Rua das Flores, 321 - Capacidade: 50 pessoas
+                    <strong>Centro Cultural:</strong> Rua das Artes, 400 - Horário: 8h às 20h
                 </li>
+            </ul>
+        </section>
+
+        <section id="itens-necessarios" class="section">
+            <h2>Itens Necessários para Doação</h2>
+            <p>Estamos aceitando os seguintes itens:</p>
+            <ul>
+                <li>Alimentos não perecíveis</li>
+                <li>Água potável</li>
+                <li>Roupas e calçados em bom estado</li>
+                <li>Produtos de higiene pessoal</li>
+                <li>Materiais de limpeza</li>
+                <li>Medicamentos (não vencidos)</li>
             </ul>
         </section>
 
         <section id="voluntariado" class="section">
             <h2>Inscreva-se como Voluntário</h2>
-            <p>Se você deseja ajudar durante as enchentes, considere se inscrever como voluntário. Sua ajuda é muito valiosa!</p>
+            <p>Se você deseja ajudar na arrecadação e distribuição de doações, considere se inscrever como voluntário!</p>
             <form action="submit_voluntario.php" method="post">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
