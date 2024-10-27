@@ -1,13 +1,12 @@
 ## #Equipe-008
 ## Membros Atuantes: 
 
-   * Anselmo Silva
-   * Diego Pitoco
-   * Flávio de Medeiros Lima
-   * Hirislayne Batista
-   * Lauren Monteles
-   * Willian Santos
-
+* Anselmo Conceição Silva,
+* Diego Reis Pitoco,
+* Flávio de Medeiros Lima,
+* Hirislayne Batista Ramos dos Santos,
+* Lauren Freire Monteles,
+* Williamcdos Santos Paes.
 
 
 # Proposta do Hackathon 🌊
